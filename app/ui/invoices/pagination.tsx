@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { generatePagination } from '@/app/lib/utils';
 
 export default function Pagination({ totalPages }: { totalPages: number }) {
+  const currentPage = 1; // NOTE: replace this with the actual current page
+  const createPageURL = (page: number) => `/invoices?page=${page}`;
   // NOTE: comment in this code when you get to this point in the course
 
   // const allPages = generatePagination(currentPage, totalPages);
